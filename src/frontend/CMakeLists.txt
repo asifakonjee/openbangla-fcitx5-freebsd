@@ -23,8 +23,6 @@ set(SRC_MAIN main.cpp
 set(LINK_LIBS libShared Qt5::Widgets Qt5::Network)
 
 if(OS_LINUX OR OS_FREEBSD)
-    target_include_directories(openbangla-gui PRIVATE ${ZSTD_INCLUDE_DIRS})
-    target_link_directories(openbangla-gui PRIVATE ${ZSTD_LIBRARY_DIRS})
     list(APPEND LINK_LIBS ${ZSTD_LIBRARIES})
 endif()
 
