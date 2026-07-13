@@ -20,10 +20,14 @@ set(SRC_MAIN main.cpp
         SingleInstance.cpp
         AvroPhonetic.cpp)
 
-set(LINK_LIBS libShared Qt5::Widgets Qt5::Network)
+set(LINK_LIBS
+    libShared
+    Qt5::Widgets
+    Qt5::Network
+)
 
 if(OS_LINUX OR OS_FREEBSD)
-    list(APPEND LINK_LIBS ${ZSTD_LIBRARIES})
+    list(APPEND LINK_LIBS PkgConfig::ZSTD)
 endif()
 
 if(WIN32)
