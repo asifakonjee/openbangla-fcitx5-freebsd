@@ -1,5 +1,5 @@
 //Ref : https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74
-= ওপেনবাংলা কিবোর্ড এটা এক্সপেরিমেন্টাল রিপোজিটরি ব্যবহার করবেন না!
+= ওপেনবাংলা কিবোর্ড--- এটা এক্সপেরিমেন্টাল রিপোজিটরি ব্যবহার করবেন না!
 ifdef::env-github[]
 :imagesdir:
  https://gist.githubusercontent.com/path/to/gist/revision/dir/with/all/images
