@@ -1,17 +1,15 @@
 add_subdirectory(common)
 
-## Platform depended things
-if (OS_LINUX)
-    ## Platform is Linux
+if(OS_LINUX OR OS_FREEBSD)
 
-    if (ENABLE_IBUS)
-        add_subdirectory(ibus)
-    endif()
-
-    if (ENABLE_FCITX)
+    if(ENABLE_FCITX)
         add_subdirectory(fcitx)
     endif()
 
-    ## Include subdirectories
+    if(OS_LINUX AND ENABLE_IBUS)
+        add_subdirectory(ibus)
+    endif()
+
     add_subdirectory(riti)
-endif (OS_LINUX)
+
+endif()
