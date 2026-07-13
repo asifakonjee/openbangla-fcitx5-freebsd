@@ -103,7 +103,7 @@ find_package(Fcitx5Core 5.0.5 REQUIRED)
     endif()
 
     ## Find zstd ##
-    pkg_check_modules(ZSTD REQUIRED libzstd)
+    pkg_check_modules(ZSTD REQUIRED IMPORTED_TARGET libzstd)
 endif()
 
 # For Windows
